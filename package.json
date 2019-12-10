@@ -1,6 +1,6 @@
 {
   "name": "egg-mongoose-redis",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Mongoose cache plugin for egg",
   "eggPlugin": {
     "name": "mongooseRedis",
