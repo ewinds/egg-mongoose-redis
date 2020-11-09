@@ -9,12 +9,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-mongoose-redis.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-mongoose-redis
-[travis-image]: https://img.shields.io/travis/eggjs/egg-mongoose-redis.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-mongoose-redis
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-mongoose-redis.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-mongoose-redis?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-mongoose-redis.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-mongoose-redis
+[travis-image]: https://img.shields.io/travis/ewinds/egg-mongoose-redis.svg?style=flat-square
+[travis-url]: https://travis-ci.org/ewinds/egg-mongoose-redis
+[codecov-image]: https://img.shields.io/codecov/c/github/ewinds/egg-mongoose-redis.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/ewinds/egg-mongoose-redis?branch=master
+[david-image]: https://img.shields.io/david/ewinds/egg-mongoose-redis.svg?style=flat-square
+[david-url]: https://david-dm.org/ewinds/egg-mongoose-redis
 [snyk-image]: https://snyk.io/test/npm/egg-mongoose-redis/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-mongoose-redis
 [download-image]: https://img.shields.io/npm/dm/egg-mongoose-redis.svg?style=flat-square
@@ -42,15 +42,7 @@ exports.mongooseRedis = {
 
 ```javascript
 // query
-const results = await app.mysqlPaginator.query("posts", {
-  where: { status: "draft" },
-  orders: [
-    ["created_at", "desc"],
-    ["id", "desc"]
-  ],
-  page: 1,
-  size: 10
-});
+const results = await ctx.model.User.find({foo: "bar"}).cache(ttl || 7200, key);;
 ```
 
 ## License
